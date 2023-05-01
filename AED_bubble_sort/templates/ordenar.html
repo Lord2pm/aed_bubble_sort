@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	<main class="main-ordenar">
+		<h1>As 15 melhores equipas do mundo {{ titulo }}</h1>
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Nome</th>
+					<th>Orçamento</th>
+					<th>Títulos</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for dado in lista_ordenada %}
+					{% if campo == 'nome' %}
+						{% set others = model.get_clube('nome', dado) %}
+					{% else %}
+						{% if campo == 'orcamento' %}
+							{% set others = model.get_clube('orcamento', dado) %}
+							
+						{% else %}
+							{% set others = model.get_clube('qtd_titulos', dado) %}
+						{% endif %}
+					{% endif %}
+						{% if others | length > 1 %}
+							{% for equipa in others %}
+								<tr>
+									<td><img src="../static/img/{{ equipa[4] }}" width="25px"></td>
+									<td>{{ equipa[1] | title }}</td>
+									<td>{{ equipa[2] }} <i class="bi bi-currency-euro"></i></td>
+									<td>{{ equipa[3] }} <i class="bi bi-trophy-fill"></i></td>
+								</tr>
+							{% endfor %}
+						{% else %}
+							<tr>
+								<td><img src="../static/img/{{others[0][4]}}" width="25px"></td>
+								<td>{{ others[0][1] | title }}</td>
+								<td>{{ others[0][2] }} <i class="bi bi-currency-euro"></i></td>
+								<td>{{ others[0][3] }} <i class="bi bi-trophy-fill"></i></td>
+							</tr>
+						{% endif %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	<main class="main-sobre">
+		<h1>Algoritmo bubble sort</h1>
+		<p>O bubble sort, ou ordenação por flutuação (literalmente "por bolha"), é um algoritmo de ordenação dos mais simples. A ideia é percorrer o vector diversas vezes, e a cada passagem fazer flutuar para o topo / base o maior elemento da sequência. Essa movimentação lembra a forma como as bolhas em um tanque de água procuram seu próprio nível, e disso vem o nome do algoritmo.</p>
+		<figure>
+			<img src="../static/img/Bubble_sort_animation.gif" alt="Imagem representativa do algoritmo bubble sort.">
+			<figcaption>Imagem representativa do algoritmo bubble sort.</figcaption>
+		</figure>
+		<p>No melhor caso, o algoritmo executa n operações relevantes, onde n representa o número de elementos do vector. No pior caso, são feitas 2 n^2 operações. A complexidade desse algoritmo é de ordem quadrática. Por isso, ele não é recomendado para programas que precisem de velocidade e lidem com quantidade elevada de dados.</p>
+		<h2>Descrição do problema</h2>
+		<p>Este projecto resulta de um trabalho cuja finalidade última conciste em, estudar detalhadamente o algoritmo de ordenação <strong>bubble sort</strong>, aplicando-o para a resolução do problema abaixo descrito:</p>
+		<p>Desenvolver um algoritmo que através de determinadas funções, construa uma lista com os 15 maiores clubes de futebol do mundo. No final, o programa deve imprimir 3 listas ordenadas por:</p>
+		<ol>
+			<li><a href="/ordenar/{{ 1 }}"><i class="bi bi-check2-circle"></i> Nome dos clubes (ordem allfabética);</a></li>
+			<li><a href="/ordenar/{{ 2 }}"><i class="bi bi-check2-circle"></i> Número de títulos;</a></li>
+			<li><a href="/ordenar/{{ 3 }}"><i class="bi bi-check2-circle"></i> Orçamento do clube.</a></li>
+		</ol>
+		<h2>Elementos do grupo n° 1</h2>
+		<ol>
+			<li><a href="#"><i class="bi bi-check2-circle"></i> Adelino Francisco Emiliano;</a></li>
+			<li><a href="#"><i class="bi bi-check2-circle"></i> Docas Muapelwa;</a></li>
+			<li><a href="#"><i class="bi bi-check2-circle"></i> Edgar Fernando Lourenço Nambalo;</a></li>
+			<li><a href="#"><i class="bi bi-check2-circle"></i> Luís Manuel Muhele;</a></li>
+			<li><a href="#"><i class="bi bi-check2-circle"></i> Nickison Pedro Bonito.</a></li>
+		</ol>
+	</main>
+{% endblock %}
