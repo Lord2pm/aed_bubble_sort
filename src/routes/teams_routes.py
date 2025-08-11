@@ -9,14 +9,16 @@ teams_blueprint = Blueprint("teams", __name__, url_prefix="/")
 def index():
     with DbOperations() as db:
         teams = db.get_clubes()
+    print(teams)
     return render_template("index.html", equipas=teams)
 
-"""
+
 @teams_blueprint.route("/sobre")
 def sobre():
     return render_template("sobre.html")
 
 
+"""
 @teams_blueprint.route("/ordenar/<id>")
 def ordenar(id):
     dados = model.get_clubes()

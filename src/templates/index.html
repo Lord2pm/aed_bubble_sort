@@ -1,54 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>AED - Bubble sort</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="../static/css/style.css">
-</head>
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<a href="/">AED</a>
-			</div>
-			<ul>
-				<li><a href="/"><i class="bi bi-house-check-fill"></i> Home</a></li>
-				<li><a href="/sobre"><i class="bi bi-archive"></i>Sobre</a></li>
-				<li id="exibir-menu">
-					<a href="#"><i class="bi bi-list-task"></i>Ordenar</a>
-					<ul class="sub-menu">
-						<li><a href="/ordenar/{{ 1 }}"><i class="bi bi-archive"></i>A-Z</a></li>
-						<li><a href="/ordenar/{{ 2 }}"><i class="bi bi-currency-euro"></i> Orçamento</a></li>
-						<li><a href="/ordenar/{{ 3 }}"><i class="bi bi-trophy-fill"></i> Títulos</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	{% block content %}
-		<main>
-			<h1>As 15 melhores equipas do mundo</h1>
-			<div class="equipas">
-				{% for equipa in equipas %}
-					<div class="equipa">
-						<img src="../static/img/{{ equipa[4] }}">
-						<div class="numeros">
-							<span>Nome: {{ equipa[1] | title }}</span>
-							<span>Orçamento: {{ equipa[2] }} <i class="bi bi-currency-euro"></i></span>
-							<span>Títulos: {{ equipa[3] }} <i class="bi bi-trophy-fill"></i></span>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
-		</main>
-	{% endblock %}
-	<footer>
-		<div class="social-networks">
-			<a href=""><i class="bi bi-github"></i></a>
-		</div>
-		<p>&copy; AED - Bubble sort - Todos direitos reservados.</p>
-	</footer>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+<main>
+  <h1>As 15 melhores equipas do mundo</h1>
+  <div class="equipas">
+    {% for equipa in equipas %}
+    <div class="equipa">
+      <img src="../static/img/{{ equipa[2] }}" />
+      <div class="numeros">
+        <span>Nome: {{ equipa[1] | title }}</span>
+        <span
+          >Orçamento: {{ equipa[4] }} Milhões <i class="bi bi-currency-euro"></i
+        ></span>
+        <span>Títulos: {{ equipa[3] }} <i class="bi bi-trophy-fill"></i></span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}
