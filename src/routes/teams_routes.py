@@ -19,24 +19,9 @@ def sobre_view():
 
 
 @teams_blueprint.route("/ordenar/<index>")
-def ordenar_view(index):
-    page_titles = {
-        "1": "ordenadas de A - Z",
-        "2": "dispostas pelos seus orçamentos",
-        "3": "dispostas pela quantidade de títulos",
-    }
+def ordenar_view(index: int):
+    index = int(index)
     with DbOperations() as db:
         teams = db.get_clubes()
-    print(teams)
-
-    titulo = page_titles.get(index)
-    lista_ordenada = bubble_sort(teams, int(index))
-    campo = "nome"
-
-    return render_template(
-        "ordenar.html",
-        model=teams,
-        lista_ordenada=lista_ordenada,
-        titulo=titulo,
-        campo=campo,
-    )
+    lista_ordenada = bubble_sort(teams, index)
+    return render_template("ordenar.html", lista_ordenada=lista_ordenada)
