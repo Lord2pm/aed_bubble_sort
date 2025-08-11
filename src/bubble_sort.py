@@ -1,7 +1,6 @@
 def bubble_sort(lista):
 	qtd_elementos = len(lista)
-	x = 0
-
+	
 	for i in range(qtd_elementos - 1):
 		for i in range(qtd_elementos - 1):
 			if type(lista[i]) == int:

@@ -1,6 +1,6 @@
 from flask import Flask, render_template
-from bubble_sort import bubble_sort
-from models import Model
+from src.bubble_sort import bubble_sort
+from src.models import Model
 
 
 app = Flask(__name__)
