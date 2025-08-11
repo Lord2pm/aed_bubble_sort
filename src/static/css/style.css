@@ -1,211 +1,217 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 body {
-	background: #fff;
+  background: #fff;
 }
-ul li a, .logo a, ol li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 12pt;
-	letter-spacing: 2px;
+ul li a,
+.logo a,
+ol li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12pt;
+  letter-spacing: 2px;
 }
 ul li:hover {
-	background: #6001d3;
+  background: #6001d3;
 }
-ul li:hover a, .logo:hover a {
-	color: #fff;
+ul li:hover a,
+.logo:hover a {
+  color: #fff;
 }
 li {
-	list-style: none;
+  list-style: none;
 }
 ul li a i {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 /* ------ Cabeçalho ------ */
 
 header nav {
-	background: #000;
-	width: 100%;
-	height: 90px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 50px 0 50px;
+  background: #000;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 0 50px;
 }
 header nav ul {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 ul li {
-	width: 120px;
-	height: 40px;
-	border-radius: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	transition: 0.5s;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
 }
 #exibir-menu {
-	flex-direction: column;
+  flex-direction: column;
 }
 #exibir-menu:hover .sub-menu {
-	display: block;
+  display: block;
 }
 .sub-menu {
-	position: absolute;
-	width: 180px;
-	background: #000;
-	display: block;
-	margin-top: 160px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	display: none;
+  position: absolute;
+  width: 180px;
+  background: #000;
+  display: block;
+  margin-top: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
 }
 .sub-menu li {
-	width: 180px;
+  width: 180px;
 }
 .sub-menu li a {
-	font-size: 11pt;
+  font-size: 11pt;
 }
 /* ------ Corpo ------ */
 
-h1, .main-sobre h2 {
-	font-size: 16pt;
-	margin: 30px 0 20px 50px;
+h1,
+.main-sobre h2 {
+  font-size: 16pt;
+  margin: 30px 0 20px 50px;
 }
 .equipas {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 .equipa {
-	width: 440px;
-	height: 160px;
-	border: 1px solid transparent;
-	border-radius: 5px;
-	box-shadow: 0 0 20px rgba(96, 1, 211, 0.3);
-	margin-top: 30px;
-	display: flex;
-	align-items: center;
+  width: 440px;
+  height: 160px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(96, 1, 211, 0.3);
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 .equipa img {
-	width: 100px;
-	height: 110px;
-	margin: 0 30px 0 30px;
+  width: 100px;
+  height: 110px;
+  margin: 0 30px 0 30px;
 }
 .numeros {
-	display: flex;
-	flex-direction: column;	
+  display: flex;
+  flex-direction: column;
 }
 .numeros span {
-	margin: 5px 0 5px 0;
+  margin: 5px 0 5px 0;
 }
 
 /* ------ Rodapé ------ */
 
-footer, .social-networks {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+footer,
+.social-networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer {
-	background: #000;
-	width: 100%;
-	height: 80px;
+  background: #000;
+  width: 100%;
+  height: 80px;
 }
 .social-networks a i {
-	color: #fff;
-	font-size: 12pt;
-	margin-right: 10px;
+  color: #fff;
+  font-size: 12pt;
+  margin-right: 10px;
 }
 .social-networks a i:hover {
-	color: #6001d3;
+  color: #6001d3;
 }
 footer p {
-	color: #fff;
-	font-size: 11pt;
-	margin-left: 30px;
+  color: #fff;
+  font-size: 11pt;
+  margin-left: 30px;
 }
 
 /* ------ Sobre ------ */
 
 .main-sobre {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .main-sobre p {
-	margin-left: 50px;
-	line-height: 35px;
-	margin-right: 50px;
-	text-align: justify;
+  margin-left: 50px;
+  line-height: 35px;
+  margin-right: 50px;
+  text-align: justify;
 }
 .main-sobre img {
-	display: block;
-	margin: 20px auto 20px auto;
-	border: 1px solid transparent;
-	border-radius: 5px;
-	box-shadow: 0 0 20px rgba(96, 1, 211, 0.1);
+  display: block;
+  margin: 20px auto 20px auto;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(96, 1, 211, 0.1);
 }
 figcaption {
-	text-align: center;
-	font-size: 11pt;
-	margin-bottom: 15px;
+  text-align: center;
+  font-size: 11pt;
+  margin-bottom: 15px;
 }
 ol {
-	margin: 20px 0 0 50px;
+  margin: 20px 0 0 50px;
 }
 ol li a {
-	color: rgba(96, 1, 211, 1);
-	letter-spacing: 0;
+  color: rgba(96, 1, 211, 1);
+  letter-spacing: 0;
 }
 ol li a:hover {
-	color: #000;
+  color: #000;
 }
 ol li {
-	margin-top: 10px;
-	text-indent: 10px;
+  margin-top: 10px;
+  text-indent: 10px;
 }
 
 /* ------ Ordenar ------ */
 
 .main-ordenar {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .content-table {
-	border-collapse: collapse;
-	margin: 25px 0;
-	font-size: 12pt;
-	min-width: 400px;
-	width: 750px;
-	border-radius: 5px 5px 0 0;
-	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-	margin-left: 50px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 12pt;
+  min-width: 400px;
+  width: 750px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 50px;
 }
 .content-table thead tr {
-	background-color: #6001d3;
-	color: #fff;
-	text-align: left;
-	font-weight: bold;
+  background-color: #6001d3;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
 }
-.content-table td, .content-table th {
-	padding: 12px 15px;
+.content-table td,
+.content-table th {
+  padding: 12px 15px;
 }
 .content-table tbody tr {
-	border-bottom: 1px solid #6001d3;
+  border-bottom: 1px solid #6001d3;
 }
 .content-table tbody tr:nth-of-type(even) {
-	background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 .content-table tbody tr:last-of-type {
-	border-bottom: 2px solid #6001d3;
+  border-bottom: 2px solid #6001d3;
 }
 .content-table tbody tr:active-row {
-	font-weight: bold;
-	color: #ed1e24;
+  font-weight: bold;
+  color: #ed1e24;
 }
